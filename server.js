@@ -10,5 +10,5 @@ var path = require("path");
 var fs = require("fs");
 
 
-
-
+require("./routing/htmlRoutes")(app);
+require("./routing/apiRoutes")(app);

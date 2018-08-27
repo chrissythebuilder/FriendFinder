@@ -43,8 +43,8 @@
     <input type ="text">
     <hr>
 
-    <h2> Question 1 </h2>
-    <p> This is who you are </p>
+    <h2> Statement #1 </h2>
+    <p> You enjoy travelling to a new place and getting lost to find hidden gems. </p>
     <select class = "options">
         <option value=""> </option>
         <option value="1"> 1 (Strongly Disagree) </option>
@@ -54,8 +54,8 @@
         <option value="5"> 5 (Strongly Agree) </option>
     </select>
 
-    <h2> Question 2 </h2>
-    <p> This is who you are </p>
+    <h2> Statement #2 </h2>
+    <p> You are open to eat different types of cuisines. </p>
     <select class = "options">
         <option value=""> </option>
         <option value="1"> 1 (Strongly Disagree) </option>
@@ -65,8 +65,8 @@
         <option value="5"> 5 (Strongly Agree) </option>
     </select>
 
-    <h2> Question 3 </h2>
-    <p> This is who you are </p>
+    <h2> Statement #3 </h2>
+    <p> You like to volunteer towards a cause close to your heart. </p>
     <select class = "options">
         <option value=""> </option>
         <option value="1"> 1 (Strongly Disagree) </option>
@@ -76,8 +76,8 @@
         <option value="5"> 5 (Strongly Agree) </option>
     </select>
 
-    <h2> Question 4 </h2>
-    <p> This is who you are </p>
+    <h2> Statement #4 </h2>
+    <p> You value work-life balance. </p>
     <select class = "options">
         <option value=""> </option>
         <option value="1"> 1 (Strongly Disagree) </option>
@@ -87,8 +87,8 @@
         <option value="5"> 5 (Strongly Agree) </option>
     </select>
 
-    <h2> Question 5 </h2>
-    <p> This is who you are </p>
+    <h2> Statement #5 </h2>
+    <p> You do not worry about where you will be 5 years from today. </p>
     <select class = "options">
         <option value=""> </option>
         <option value="1"> 1 (Strongly Disagree) </option>
@@ -98,8 +98,8 @@
         <option value="5"> 5 (Strongly Agree) </option>
     </select>
 
-    <h2> Question 6 </h2>
-    <p> This is who you are </p>
+    <h2> Statement #6 </h2>
+    <p> You like to go to live concerts. </p>
     <select class = "options">
         <option value=""> </option>
         <option value="1"> 1 (Strongly Disagree) </option>
@@ -109,8 +109,8 @@
         <option value="5"> 5 (Strongly Agree) </option>
     </select>
 
-    <h2> Question 7 </h2>
-    <p> This is who you are </p>
+    <h2> Statement #7 </h2>
+    <p> You have a good relationship with your family. </p>
     <select class = "options">
         <option value=""> </option>
         <option value="1"> 1 (Strongly Disagree) </option>
@@ -120,8 +120,8 @@
         <option value="5"> 5 (Strongly Agree) </option>
     </select>
 
-    <h2> Question 8 </h2>
-    <p> This is who you are </p>
+    <h2> Statement #8 </h2>
+    <p> You can handle stress and pressure with composure. </p>
     <select class = "options">
         <option value=""> </option>
         <option value="1"> 1 (Strongly Disagree) </option>
@@ -131,8 +131,8 @@
         <option value="5"> 5 (Strongly Agree) </option>
     </select>
 
-    <h2> Question 9 </h2>
-    <p> This is who you are </p>
+    <h2> Statement #9 </h2>
+    <p> You enjoy having deep, intellectual and thought-provoking conversations. </p>
     <select class = "options">
         <option value=""> </option>
         <option value="1"> 1 (Strongly Disagree) </option>
@@ -142,8 +142,8 @@
         <option value="5"> 5 (Strongly Agree) </option>
     </select>
 
-    <h2> Question 10 </h2>
-    <p> This is who you are </p>
+    <h2> Statement #10 </h2>
+    <p> You are mostly if not always, on time. </p>
     <select class = "options">
         <option value=""> </option>
         <option value="1"> 1 (Strongly Disagree) </option>
@@ -153,10 +153,44 @@
         <option value="5"> 5 (Strongly Agree) </option>
     </select>
 
-    <button id = "submit" type="button" class="btn btn-primary btn-block"> I'm ready to go! </button>
-    <hr>
+    <br>
 
-    <p> <a href = "http://localhost:8080/api/friends"> API Friends List </a> | <a href = "https://github.com/chrissythebuilder/FriendFinder"> Github Repo </a> </p>
+    <!-- Button trigger modal -->
+    <button id="submit" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> Find my match! </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Congratulations, you have been matched to:</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id="modal-content" class="modal-body">
+              ...
+            </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      
+      <hr>
 
+    <p> <a href = "/api/friends"> API Friends List </a> | <a href = "https://github.com/chrissythebuilder/FriendFinder"> Github Repo </a> </p>
 </body>
+
 </html>
+
+<script type = "text/javascript">
+
+    $("#submit").on("click", function() {
+        
+    })
+
+
+</script>
