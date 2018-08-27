@@ -37,15 +37,15 @@
 
     <h2> About You </h2>
     <h4> Name (Required): </h4>
-    <input type = "text">
+    <input id ="name" type = "text">
 
     <h4> Link to Photo Image (Required): </h4>
-    <input type ="text">
+    <input id = "photo" type ="text">
     <hr>
 
     <h2> Statement #1 </h2>
     <p> You enjoy travelling to a new place and getting lost to find hidden gems. </p>
-    <select class = "options">
+    <select id = "opt1" class = "options">
         <option value=""> </option>
         <option value="1"> 1 (Strongly Disagree) </option>
         <option value="2"> 2 </option>
@@ -56,7 +56,7 @@
 
     <h2> Statement #2 </h2>
     <p> You are open to eat different types of cuisines. </p>
-    <select class = "options">
+    <select id = "opt2" class = "options">
         <option value=""> </option>
         <option value="1"> 1 (Strongly Disagree) </option>
         <option value="2"> 2 </option>
@@ -67,7 +67,7 @@
 
     <h2> Statement #3 </h2>
     <p> You like to volunteer towards a cause close to your heart. </p>
-    <select class = "options">
+    <select id = "opt3" class = "options">
         <option value=""> </option>
         <option value="1"> 1 (Strongly Disagree) </option>
         <option value="2"> 2 </option>
@@ -78,7 +78,7 @@
 
     <h2> Statement #4 </h2>
     <p> You value work-life balance. </p>
-    <select class = "options">
+    <select id = "opt4" class = "options">
         <option value=""> </option>
         <option value="1"> 1 (Strongly Disagree) </option>
         <option value="2"> 2 </option>
@@ -89,7 +89,7 @@
 
     <h2> Statement #5 </h2>
     <p> You do not worry about where you will be 5 years from today. </p>
-    <select class = "options">
+    <select id = "opt5" class = "options">
         <option value=""> </option>
         <option value="1"> 1 (Strongly Disagree) </option>
         <option value="2"> 2 </option>
@@ -100,7 +100,7 @@
 
     <h2> Statement #6 </h2>
     <p> You like to go to live concerts. </p>
-    <select class = "options">
+    <select id = "opt6" class = "options">
         <option value=""> </option>
         <option value="1"> 1 (Strongly Disagree) </option>
         <option value="2"> 2 </option>
@@ -111,7 +111,7 @@
 
     <h2> Statement #7 </h2>
     <p> You have a good relationship with your family. </p>
-    <select class = "options">
+    <select id = "opt7" class = "options">
         <option value=""> </option>
         <option value="1"> 1 (Strongly Disagree) </option>
         <option value="2"> 2 </option>
@@ -122,7 +122,7 @@
 
     <h2> Statement #8 </h2>
     <p> You can handle stress and pressure with composure. </p>
-    <select class = "options">
+    <select id = "opt8" class = "options">
         <option value=""> </option>
         <option value="1"> 1 (Strongly Disagree) </option>
         <option value="2"> 2 </option>
@@ -133,7 +133,7 @@
 
     <h2> Statement #9 </h2>
     <p> You enjoy having deep, intellectual and thought-provoking conversations. </p>
-    <select class = "options">
+    <select id = "opt9" class = "options">
         <option value=""> </option>
         <option value="1"> 1 (Strongly Disagree) </option>
         <option value="2"> 2 </option>
@@ -144,7 +144,7 @@
 
     <h2> Statement #10 </h2>
     <p> You are mostly if not always, on time. </p>
-    <select class = "options">
+    <select id = "opt10" class = "options">
         <option value=""> </option>
         <option value="1"> 1 (Strongly Disagree) </option>
         <option value="2"> 2 </option>
@@ -188,8 +188,28 @@
 
 <script type = "text/javascript">
 
-    $("#submit").on("click", function() {
-        
+    $("#submit").on("click", function(event) {
+        event.preventDefault();
+
+        var moreFriends = {
+            name: $("#name").val().trim(),
+            photo: $("#photo").val().trim(),
+            score: [
+                $("#opt1").val(),
+                $("#opt2").val(),
+                $("#opt3").val(),
+                $("#opt4").val(),
+                $("#opt5").val(),
+                $("#opt6").val(),
+                $("#opt7").val(),
+                $("#opt8").val(),
+                $("#opt9").val(),
+                $("#opt10").val(),
+            ]
+        };
+
+        console.log(moreFriends);
+
     })
 
 
